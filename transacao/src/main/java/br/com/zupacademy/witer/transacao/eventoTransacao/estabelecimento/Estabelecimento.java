@@ -1,8 +1,5 @@
 package br.com.zupacademy.witer.transacao.eventoTransacao.estabelecimento;
 
-
-import br.com.zupacademy.witer.transacao.eventoTransacao.Transacao;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
@@ -33,4 +30,15 @@ public class Estabelecimento {
         this.endereco = endereco;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
 }
