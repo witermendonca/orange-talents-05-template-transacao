@@ -47,7 +47,7 @@ public class ConsultaTransacaoController {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Cartão não encontrado.");
         }
 
-        Page<Transacao> listTransacoes = transacaoRepository.findAllByCartao(cartaoCadastrado.get(), page);
-        return ResponseEntity.ok().body(ConsultaTransacao.toDTO(listTransacoes));
+        Page<Transacao> transacoes = transacaoRepository.findAllByCartao(cartaoCadastrado.get(), page);
+        return ResponseEntity.ok().body(ConsultaTransacao.toDTO(transacoes));
     }
 }
